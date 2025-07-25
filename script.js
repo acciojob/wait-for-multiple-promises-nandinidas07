@@ -19,12 +19,12 @@ Promise.all(promises).then(results => {
 
   results.forEach(result => {
     const row = document.createElement("tr");
-    row.innerHTML = ``<td>${result.name}</td><td>${result.time.toFixed(3)}</td>``;
+    row.innerHTML = `<td>${result.name}</td><td>${result.time.toFixed(3)}</td>`;
     output.appendChild(row);
   });
 
   const total = Math.max(...results.map(r => r.time));
   const totalRow = document.createElement("tr");
-  totalRow.innerHTML = <td>Total</td><td>${total.toFixed(3)}</td>;
+  totalRow.innerHTML = `<td>Total</td><td>${total.toFixed(3)}</td>`;
   output.appendChild(totalRow);
 });
